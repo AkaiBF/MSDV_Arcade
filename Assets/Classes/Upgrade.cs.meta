@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e97f86ceadf6c2f40bfdd6d76e94c48f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ball: {instanceID: 0}
+  - acceleratorSprite: {fileID: 21300000, guid: eb7f6b70e2ff23b4c9fb3e208294c6cd, type: 3}
+  - gravitySprite: {fileID: 21300000, guid: f2198ba658a60c94bb0713d0c928be8d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
