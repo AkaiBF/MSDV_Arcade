@@ -27,10 +27,7 @@ public class Upgrade : MonoBehaviour
     {
         IUpgrades[] allUpgrades = (IUpgrades[])IUpgrades.GetValues(typeof(IUpgrades));
         assignedUpgrade = allUpgrades[UnityEngine.Random.Range(0, allUpgrades.Length)];
-        Debug.Log("Balls/" + assignedUpgrade);
         Sprite sprite = Resources.Load<Sprite>("Balls/" + assignedUpgrade);
-        Debug.Log("Sprite -> " + sprite);
-        Debug.Log("Lanzando " + assignedUpgrade);
         this.gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
     }
 

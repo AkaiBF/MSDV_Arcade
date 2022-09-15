@@ -27,7 +27,6 @@ public class Controller : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if(col.gameObject.tag == "Upgrade") {
-            Debug.Log(col.gameObject.GetComponent<Upgrade>().assignedUpgrade);
             col.gameObject.GetComponent<Upgrade>().Activate();
             Destroy(col.gameObject);
         }

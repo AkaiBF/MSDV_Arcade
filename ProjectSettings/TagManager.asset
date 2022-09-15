@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ball
   - Upgrade
+  - Menu
   layers:
   - Default
   - TransparentFX

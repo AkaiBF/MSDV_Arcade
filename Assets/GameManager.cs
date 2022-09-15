@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private GameObject ball;
+    public Canvas menu;
+    public Canvas ajustesPausa;
+    public Text score;
     // Start is called before the first frame update
     void Start()
     {
+        menu.gameObject.SetActive(false);
+        ajustesPausa.gameObject.SetActive(false);
         this.ResetBall();   
     }
 
@@ -29,7 +35,29 @@ public class GameManager : MonoBehaviour
     }
 
     public void Pause() {
-        if(Time.timeScale == 1) Time.timeScale = 0;
-        else Time.timeScale = 1;
+        if(Time.timeScale == 1) {
+            Time.timeScale = 0;
+            menu.gameObject.SetActive(true);
+        } 
+        else {
+            Time.timeScale = 1;
+            menu.gameObject.SetActive(false);
+        } 
+    }
+
+    public void Restart() {
+        score.text = "0 - 0";
+        this.ResetBall();
+        Pause();
+    }
+
+    public void ShowAjustes() {
+        ajustesPausa.gameObject.SetActive(true);
+        menu.gameObject.SetActive(false);
+    }
+
+    public void HideAjustes() {
+        ajustesPausa.gameObject.SetActive(false);
+        menu.gameObject.SetActive(true);
     }
 }
